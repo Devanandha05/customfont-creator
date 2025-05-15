@@ -29,25 +29,29 @@ body {
   }
 
   .container {
-    max-width: 1200px;
+    max-width: 1100px;
     display: flex;
     flex-direction: column;
+    backdrop-filter: blur(10px);    
+    border-radius: 10px;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    padding: 10px;
     z-index: 3;
   }
   
   .title{
-    margin: 0;
+    margin-bottom: 0;
     color: #fff;
-    text-shadow: 1px 1px 4px rgba(96, 33, 135, 0.621);
+    text-shadow: 1px 1px 4px rgba(158, 157, 159, 0.621);
     font-size: 46px;
     z-index: 3;
 
   }
 
   .title span{
+    font-size: 48px;
     font-family: cambria;
   }
   .controls label{
@@ -69,15 +73,13 @@ body {
     border-radius: 5px;
     display: flex;
     gap: 5px;
-    width: max-content;
+    width: 90%;
   }
   
   .create-section, .preview-section{
     z-index: 3;
-    margin-top: 20px;
     padding: 20px 30px;
     border-radius: 10px;
-    background:linear-gradient(50deg,#230b3e,#38155b,#281739);
   }
 
 
@@ -136,9 +138,11 @@ body {
   .preview-section{
     color: #eee;
     width: 100%;
+    margin-top: 20px;
   }
    .preview-section input{
-    width: 90%;
+    height: 30px;
+    width: 95%;
    }
   #previewArea {
     background-color: #eee;
@@ -151,14 +155,14 @@ body {
     background-color: #f4f4f4;
     border-radius: 12px;
     margin-top: 1rem;
-    min-height: 80px;
+    height: 150px;
   }
 
   #previewArea canvas {
     border: 1px solid #ccc;
     border-radius: 8px;
     background: white;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
     transition: transform 0.2s;
   }
   
@@ -183,15 +187,27 @@ body {
   }
   svg{
     color: #eee;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 
-  footer p{
-    color: var(--light);
+  .footer p{
+    font-style: italic;
+    font-size: 14px;
+    color: #888;
   }
 
-  @media (max-width:700px){
+
+ @media (max-width:700px){
+    ::-webkit-scrollbar{
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track{
+      background-color: #281739;
+    }
+    ::-webkit-scrollbar-thumb{
+      background-color: #eee;
+    }
     .container-sections{
         margin: 15px auto;
         flex-direction: column;
@@ -214,7 +230,7 @@ body {
         padding: 10px;
     }
     canvas{
-        width: 400px;
-        height: 150px;
+        width: 350px;
+        height: 200px;
     }
   }
