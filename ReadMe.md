@@ -19,7 +19,9 @@ The **Custom Font Creator** is a web-based application that allows users to draw
 font-creator/
 │
 ├── index.html # Main HTML file
+|
 ├── style.css # Custom styles
+|
 └──  script.js # Core logic for drawing and saving
 
 
